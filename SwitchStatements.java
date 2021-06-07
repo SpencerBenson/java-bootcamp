@@ -10,7 +10,7 @@ public class SwitchStatements {
       case 2:
       month = "Feb";
       break;
-      case 3:
+      case 3: 
       month = "Mar";
       break;
       case 4:
