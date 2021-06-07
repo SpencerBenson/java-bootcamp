@@ -16,7 +16,7 @@ public class DealershipProject {
         System.out.println("What is your budget?");
         int budget = scan.nextInt();
         if(budget >= 10000){
-          System.out.println("Great, a nissan Altima is available.");
+          System.out.println("\nGreat, a nissan Altima is available.");
           System.out.println("\nDo you have insurance? Write 'yes' or 'no'.");
           scan.nextLine();
           String hasInsurance = scan.nextLine();
@@ -28,9 +28,9 @@ public class DealershipProject {
           int creditScore = scan.nextInt();
 
           if(hasInsurance.equals("yes") && creditScore >= 660 && hasDL.equals("yes")){
-            System.out.println("Deal! The car is yours. Pleasure doing business with you.");
+            System.out.println("\nDeal! The car is yours. Pleasure doing business with you.");
           }else{
-            System.out.println("We're Sorry! You are not elligible.");
+            System.out.println("\nWe're Sorry! You are not elligible.");
           }
 
         }else{
@@ -38,9 +38,22 @@ public class DealershipProject {
         }
       break;
       case "b":
+      System.out.println("\nWhat is your car valued at?");
+      int carValue = scan.nextInt();
+      System.out.println("\nWhat is your selling at?");
+      int carSellingPrice = scan.nextInt();
+      if (carValue > carSellingPrice && carSellingPrice < 30000){
+        System.out.println("\nWe will buy your car at the valuation of $" +
+         carValue + " and a price of $" + carSellingPrice + ". Bring it to KAYAD. \nPleasure doing business with you. :)");
+      } else{
+        System.out.println("\nSorry! We are not interested. The valuation of $" + 
+        carValue + " is higher than your selling price of $" + 
+        carSellingPrice + ".Bye! :(");
+      }
       
       break;
       default:
+      System.out.println("\nYou have entered the wrong option.");
 
     }
     scan.close();
